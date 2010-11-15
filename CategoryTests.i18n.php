@@ -555,8 +555,9 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Horacewai2
+ * @author Pbdragonwang
  */
 $messages['zh-hant'] = array(
-	'categorytests-desc' => '用於分類的测試功能',
+	'categorytests-desc' => '用於分類的測試功能',
 );
 
