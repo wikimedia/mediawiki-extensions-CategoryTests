@@ -344,10 +344,11 @@ $messages['nds-nl'] = array(
 );
 
 /** Nepali (नेपाली)
+ * @author Bhawani Gautam Rhk
  * @author सरोज कुमार ढकाल
  */
 $messages['ne'] = array(
-	'categorytests-desc' => 'प्रकार  जाँचको कार्यहरु',
+	'categorytests-desc' => 'श्रेणी  जाँचकालागि कार्य',
 );
 
 /** Dutch (Nederlands)
