@@ -153,6 +153,13 @@ $messages['eu'] = array(
 	'categorytests-desc' => 'Kategorien frogarako funtzioak',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'categorytests-desc' => 'توابع برای آزمایش رده',
+);
+
 /** Finnish (Suomi)
  * @author Cimon Avaro
  * @author Crt
