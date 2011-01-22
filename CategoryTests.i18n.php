@@ -40,7 +40,7 @@ $messages['az'] = array(
 	'categorytests-desc' => 'Kateqoriyaların yoxlanılması üçün funksiyalar',
 );
 
-/** Bashkir (Башҡорт)
+/** Bashkir (Башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -54,7 +54,7 @@ $messages['bar'] = array(
 	'categorytests-desc' => 'Funkzionen zum Testn vu Kategorien',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
@@ -294,7 +294,7 @@ $messages['ksh'] = array(
 	'categorytests-desc' => 'Fungxjuhne för Saachjroppe ze prööfe',
 );
 
-/** Cornish (Kernewek)
+/** Cornish (Kernowek)
  * @author Kw-Moon
  */
 $messages['kw'] = array(
@@ -470,14 +470,14 @@ $messages['sl'] = array(
 	'categorytests-desc' => 'Funkcije za testiranje kategorij',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'categorytests-desc' => 'Функције за тестирање категорија',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Liangent
  */
 $messages['sr-el'] = array(
@@ -566,6 +566,20 @@ $messages['zh-hans'] = array(
  * @author Pbdragonwang
  */
 $messages['zh-hant'] = array(
+	'categorytests-desc' => '用於分類的測試功能',
+);
+
+/** Chinese (Hong Kong) (‪中文(香港)‬)
+ * @author Oapbtommy
+ */
+$messages['zh-hk'] = array(
+	'categorytests-desc' => '類別測試的功能',
+);
+
+/** Chinese (Taiwan) (‪中文(台灣)‬)
+ * @author Pbdragonwang
+ */
+$messages['zh-tw'] = array(
 	'categorytests-desc' => '用於分類的測試功能',
 );
 
