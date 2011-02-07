@@ -505,6 +505,13 @@ $messages['te'] = array(
 	'categorytests-desc' => 'వర్గముల పరీక్షకు ఫంక్షన్సు',
 );
 
+/** Thai (ไทย)
+ * @author Octahedron80
+ */
+$messages['th'] = array(
+	'categorytests-desc' => 'ฟังก์ชันสำหรับการทดสอบประเภท',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
