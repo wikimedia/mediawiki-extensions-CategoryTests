@@ -350,6 +350,13 @@ $messages['mk'] = array(
 	'categorytests-desc' => 'Функции за тестирање на категории',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'categorytests-desc' => 'Fungsi untuk menguji kategori',
+);
+
 /** Nedersaksisch (Nedersaksisch)
  * @author Servien
  */
