@@ -336,6 +336,13 @@ $messages['lv'] = array(
 	'categorytests-desc' => 'Funkcijas kategoriju testēšanai',
 );
 
+/** Maithili (मैथिली)
+ * @author Vinitutpal
+ */
+$messages['mai'] = array(
+	'categorytests-desc' => 'श्रेणीक परीक्षणक लेल फ़ंक्शंस',
+);
+
 /** Malagasy (Malagasy)
  * @author Jagwar
  */
