@@ -368,7 +368,7 @@ $messages['ms'] = array(
  * @author Servien
  */
 $messages['nds-nl'] = array(
-	'categorytests-desc' => 'Functies veur kattegerietests',
+	'categorytests-desc' => 'Funksies veur kategorietests',
 );
 
 /** Nepali (नेपाली)
