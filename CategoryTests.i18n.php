@@ -372,6 +372,7 @@ $messages['nds-nl'] = array(
 );
 
 /** Nepali (नेपाली)
+ * @author Bhawani Gautam
  * @author Bhawani Gautam Rhk
  * @author सरोज कुमार ढकाल
  */
@@ -470,7 +471,7 @@ $messages['ru'] = array(
 	'categorytests-desc' => 'Функции для проверки категорий',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
