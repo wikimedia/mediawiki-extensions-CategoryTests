@@ -492,14 +492,14 @@ $messages['sl'] = array(
 	'categorytests-desc' => 'Funkcije za testiranje kategorij',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'categorytests-desc' => 'Функције за тестирање категорија',
 );
 
-/** Serbian Latin ekavian (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪Srpski (latinica)‬)
  * @author Liangent
  */
 $messages['sr-el'] = array(
