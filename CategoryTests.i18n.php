@@ -397,7 +397,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Simny
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'categorytests-desc' => 'Funksjoner for kategoritesting',
 );
 
