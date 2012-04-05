@@ -303,9 +303,10 @@ $messages['ksh'] = array(
 
 /** Cornish (Kernowek)
  * @author Kw-Moon
+ * @author Nrowe
  */
 $messages['kw'] = array(
-	'categorytests-desc' => 'Sodhow rag prevy classys',
+	'categorytests-desc' => 'Sodhow rag previ klassys',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -364,6 +365,13 @@ $messages['ms'] = array(
 	'categorytests-desc' => 'Fungsi untuk menguji kategori',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Simny
+ */
+$messages['nb'] = array(
+	'categorytests-desc' => 'Funksjoner for kategoritesting',
+);
+
 /** Nedersaksisch (Nedersaksisch)
  * @author Servien
  */
@@ -392,13 +400,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'categorytests-desc' => 'Funksjonar for kategoritesting',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Simny
- */
-$messages['nb'] = array(
-	'categorytests-desc' => 'Funksjoner for kategoritesting',
 );
 
 /** Occitan (Occitan)
