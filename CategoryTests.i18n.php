@@ -397,6 +397,7 @@ $messages['nl'] = array(
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'categorytests-desc' => 'Funksjonar for kategoritesting',
@@ -556,7 +557,7 @@ $messages['uk'] = array(
 	'categorytests-desc' => 'Функції тестування категорій',
 );
 
-/** Veps (Vepsan kel')
+/** Veps (Vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
