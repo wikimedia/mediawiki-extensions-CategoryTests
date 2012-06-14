@@ -33,14 +33,14 @@ $messages['ar'] = array(
 	'categorytests-desc' => 'دوال لاختبار التاصنيف',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
 	'categorytests-desc' => 'Funciones pa probar categoríes',
 );
 
-/** Azerbaijani (Azərbaycanca)
+/** Azerbaijani (azərbaycanca)
  * @author Sortilegus
  */
 $messages['az'] = array(
@@ -68,28 +68,28 @@ $messages['be-tarask'] = array(
 	'categorytests-desc' => 'Функцыі для праверкі катэгорыяў',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author Spiritia
  */
 $messages['bg'] = array(
 	'categorytests-desc' => 'Функции за тестване на категории',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
 	'categorytests-desc' => "Arc'hwelioù evit arnodiñ rummadoù",
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
 	'categorytests-desc' => 'Funkcije za testiranje kategorije',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Paucabot
  */
 $messages['ca'] = array(
@@ -103,7 +103,7 @@ $messages['cps'] = array(
 	'categorytests-desc' => 'Gamit para sa pagtesting sang kategorya',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
@@ -146,14 +146,14 @@ $messages['eo'] = array(
 	'categorytests-desc' => 'Funkcioj por testado de kategorioj',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  */
 $messages['es'] = array(
 	'categorytests-desc' => 'Funciones para prueba de categoría',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author An13sa
  */
 $messages['eu'] = array(
@@ -167,7 +167,7 @@ $messages['fa'] = array(
 	'categorytests-desc' => 'توابع برای آزمایش رده',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Cimon Avaro
  * @author Crt
  */
@@ -175,14 +175,14 @@ $messages['fi'] = array(
 	'categorytests-desc' => 'Funktioita luokkien testaamiseen.',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  */
 $messages['fr'] = array(
 	'categorytests-desc' => 'Fonctions pour des tests de catégorie',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -224,7 +224,7 @@ $messages['hil'] = array(
 	'categorytests-desc' => 'Pagfunksiyon para sa kategorya nga gina testingan',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Herr Mlinka
  */
 $messages['hr'] = array(
@@ -238,14 +238,14 @@ $messages['hsb'] = array(
 	'categorytests-desc' => 'Funkcije za testowanje kategorijow',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
 	'categorytests-desc' => 'Funkciók kategóriateszteléshez',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -266,7 +266,7 @@ $messages['ig'] = array(
 	'categorytests-desc' => 'Ihe nọr na ime nnwà nke màkà ébéonọr',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Darth Kule
  */
 $messages['it'] = array(
@@ -301,7 +301,7 @@ $messages['ksh'] = array(
 	'categorytests-desc' => 'Fungxjuhne för Saachjroppe ze prööfe',
 );
 
-/** Cornish (Kernowek)
+/** Cornish (kernowek)
  * @author Kw-Moon
  * @author Nrowe
  */
@@ -323,14 +323,14 @@ $messages['li'] = array(
 	'categorytests-desc' => 'Functies veur categorieteste',
 );
 
-/** Latgalian (Latgaļu)
+/** Latgalian (latgaļu)
  * @author Dark Eagle
  */
 $messages['ltg'] = array(
 	'categorytests-desc' => 'Funkcejis kategoreju puorvērei',
 );
 
-/** Latvian (Latviešu)
+/** Latvian (latviešu)
  * @author Xil
  */
 $messages['lv'] = array(
@@ -351,7 +351,7 @@ $messages['mg'] = array(
 	'categorytests-desc' => "Asa ho an'ny fanandramana ny sokajy",
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -395,7 +395,7 @@ $messages['nl'] = array(
 	'categorytests-desc' => 'Functies voor categorietests',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -403,7 +403,7 @@ $messages['nn'] = array(
 	'categorytests-desc' => 'Funksjonar for kategoritesting',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -417,7 +417,7 @@ $messages['pap'] = array(
 	'categorytests-desc' => 'Funshonnan pa kategoria di test',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Sp5uhe
  */
 $messages['pl'] = array(
@@ -438,70 +438,70 @@ $messages['ps'] = array(
 	'categorytests-desc' => 'د وېشنيزې د آزمېښت چارې',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Giro720
  */
 $messages['pt'] = array(
 	'categorytests-desc' => 'Funções para teste de categoria',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
 	'categorytests-desc' => 'Funções para teste de categorias',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
 	'categorytests-desc' => 'Funcții pentru testarea categoriilor',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
 	'categorytests-desc' => 'Funziune pe testà le categorije',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'categorytests-desc' => 'Функции для проверки категорий',
 );
 
-/** Sakha (Саха тыла)
+/** Sakha (саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
 	'categorytests-desc' => 'Категориялары тургутар функциялар',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
 	'categorytests-desc' => 'Funkcie na testovanie kategórie',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  */
 $messages['sl'] = array(
 	'categorytests-desc' => 'Funkcije za testiranje kategorij',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'categorytests-desc' => 'Функције за тестирање категорија',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author Liangent
  */
 $messages['sr-el'] = array(
@@ -515,7 +515,7 @@ $messages['su'] = array(
 	'categorytests-desc' => 'Fungsi pikeun nguji kategori',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Per
  */
 $messages['sv'] = array(
@@ -550,7 +550,7 @@ $messages['tr'] = array(
 	'categorytests-desc' => 'Kategori testi için fonksiyonlar',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Prima klasy4na
  */
 $messages['uk'] = array(
@@ -585,14 +585,14 @@ $messages['yo'] = array(
 	'categorytests-desc' => 'Àwọn iṣẹ́ fún ìdánwò ẹ̀ka',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Franklsf95
  */
 $messages['zh-hans'] = array(
 	'categorytests-desc' => '用于分类测试的功能',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Horacewai2
  * @author Pbdragonwang
  */
