@@ -61,7 +61,7 @@ $messages['bar'] = array(
 	'categorytests-desc' => 'Funkzionen zum Testn vu Kategorien',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
@@ -125,7 +125,7 @@ $messages['de'] = array(
 	'categorytests-desc' => 'Funktionen für Kategorietests',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -196,7 +196,7 @@ $messages['fy'] = array(
 	'categorytests-desc' => 'Funksjes foar kategorytests',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -231,7 +231,7 @@ $messages['hr'] = array(
 	'categorytests-desc' => 'Funkcije za testiranje kategorija',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
