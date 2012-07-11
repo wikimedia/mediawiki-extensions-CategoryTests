@@ -47,7 +47,7 @@ $messages['az'] = array(
 	'categorytests-desc' => 'Kateqoriyaların yoxlanılması üçün funksiyalar',
 );
 
-/** Bashkir (Башҡортса)
+/** Bashkir (башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -365,7 +365,7 @@ $messages['ms'] = array(
 	'categorytests-desc' => 'Fungsi untuk menguji kategori',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Simny
  */
 $messages['nb'] = array(
@@ -557,7 +557,7 @@ $messages['uk'] = array(
 	'categorytests-desc' => 'Функції тестування категорій',
 );
 
-/** Veps (Vepsän kel’)
+/** Veps (vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
