@@ -118,6 +118,13 @@ $messages['cy'] = array(
 	'categorytests-desc' => 'Ffwythiannau ar gyfer profi categorïau',
 );
 
+/** Danish (dansk)
+ * @author Hylle
+ */
+$messages['da'] = array(
+	'categorytests-desc' => 'Funktioner til test af kategorier',
+);
+
 /** German (Deutsch)
  * @author Imre
  */
