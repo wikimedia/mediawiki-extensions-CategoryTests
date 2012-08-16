@@ -372,6 +372,13 @@ $messages['ms'] = array(
 	'categorytests-desc' => 'Fungsi untuk menguji kategori',
 );
 
+/** Maltese (Malti)
+ * @author Chrisportelli
+ */
+$messages['mt'] = array(
+	'categorytests-desc' => 'Funzjonijiet għall-ittestjar tal-kategoriji',
+);
+
 /** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Simny
  */
