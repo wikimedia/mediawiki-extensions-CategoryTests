@@ -127,9 +127,10 @@ $messages['da'] = array(
 
 /** German (Deutsch)
  * @author Imre
+ * @author Kghbln
  */
 $messages['de'] = array(
-	'categorytests-desc' => 'Funktionen für Kategorietests',
+	'categorytests-desc' => 'Ermöglicht Funktionen zur Durchführung von Kategorietests',
 );
 
 /** Lower Sorbian (dolnoserbski)
