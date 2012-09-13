@@ -283,9 +283,10 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Shirayuki
  */
 $messages['ja'] = array(
-	'categorytests-desc' => 'カテゴリに関する試験のための関数群',
+	'categorytests-desc' => 'カテゴリに関する条件分岐をする関数群',
 );
 
 /** Georgian (ქართული)
