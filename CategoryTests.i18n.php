@@ -61,7 +61,7 @@ $messages['bar'] = array(
 	'categorytests-desc' => 'Funkzionen zum Testn vu Kategorien',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
@@ -381,7 +381,7 @@ $messages['mt'] = array(
 	'categorytests-desc' => 'Funzjonijiet għall-ittestjar tal-kategoriji',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Simny
  */
 $messages['nb'] = array(
@@ -411,7 +411,7 @@ $messages['nl'] = array(
 	'categorytests-desc' => 'Functies voor categorietests',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -510,14 +510,14 @@ $messages['sl'] = array(
 	'categorytests-desc' => 'Funkcije za testiranje kategorij',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'categorytests-desc' => 'Функције за тестирање категорија',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author Liangent
  */
 $messages['sr-el'] = array(
@@ -601,14 +601,14 @@ $messages['yo'] = array(
 	'categorytests-desc' => 'Àwọn iṣẹ́ fún ìdánwò ẹ̀ka',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Franklsf95
  */
 $messages['zh-hans'] = array(
 	'categorytests-desc' => '用于分类测试的功能',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Horacewai2
  * @author Pbdragonwang
  */
