@@ -629,4 +629,3 @@ $messages['zh-hk'] = array(
 $messages['zh-tw'] = array(
 	'categorytests-desc' => '用於分類的測試功能',
 );
-
