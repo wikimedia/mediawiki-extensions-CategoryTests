@@ -538,6 +538,13 @@ $messages['sv'] = array(
 	'categorytests-desc' => 'Funktioner för test av kategorier',
 );
 
+/** Tamil (தமிழ்)
+ * @author மதனாஹரன்
+ */
+$messages['ta'] = array(
+	'categorytests-desc' => 'பகுப்புச் சோதனைக்கான சார்புகள்',
+);
+
 /** Telugu (తెలుగు)
  * @author Kiranmayee
  */
