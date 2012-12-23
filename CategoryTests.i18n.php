@@ -14,9 +14,10 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Fryed-peach
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'categorytests-desc' => '{{desc}}',
+	'categorytests-desc' => '{{desc|name=Category Tests|url=http://www.mediawiki.org/wiki/Extension:CategoryTests}}',
 );
 
 /** Afrikaans (Afrikaans)
