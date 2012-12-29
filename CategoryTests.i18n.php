@@ -497,6 +497,13 @@ $messages['sah'] = array(
 	'categorytests-desc' => 'Категориялары тургутар функциялар',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'categorytests-desc' => 'ප්‍රවර්ග පරික්ෂාව සඳහා ක්‍රියාවන්',
+);
+
 /** Slovak (slovenčina)
  * @author Helix84
  */
