@@ -48,6 +48,13 @@ $messages['az'] = array(
 	'categorytests-desc' => 'Kateqoriyaların yoxlanılması üçün funksiyalar',
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'categorytests-desc' => 'بؤلمه تست ائتمک اوچون تابعلر',
+);
+
 /** Bashkir (башҡортса)
  * @author Assele
  */
