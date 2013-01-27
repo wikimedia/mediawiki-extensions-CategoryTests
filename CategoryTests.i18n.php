@@ -396,7 +396,7 @@ $messages['nb'] = array(
 	'categorytests-desc' => 'Funksjoner for kategoritesting',
 );
 
-/** Nedersaksisch (Nedersaksisch)
+/** Nedersaksies (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
