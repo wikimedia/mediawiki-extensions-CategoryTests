@@ -29,9 +29,10 @@ $messages['af'] = array(
 
 /** Arabic (العربية)
  * @author OsamaK
+ * @author Tarawneh
  */
 $messages['ar'] = array(
-	'categorytests-desc' => 'دوال لاختبار التاصنيف',
+	'categorytests-desc' => 'دوال لاختبار التصانيف',
 );
 
 /** Asturian (asturianu)
