@@ -390,14 +390,14 @@ $messages['mt'] = array(
 	'categorytests-desc' => 'Funzjonijiet għall-ittestjar tal-kategoriji',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Simny
  */
 $messages['nb'] = array(
 	'categorytests-desc' => 'Funksjoner for kategoritesting',
 );
 
-/** Nedersaksies (Nedersaksies)
+/** Low Saxon (Netherlands) (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
@@ -420,7 +420,7 @@ $messages['nl'] = array(
 	'categorytests-desc' => 'Functies voor categorietests',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Harald Khan
  * @author Njardarlogar
  */
