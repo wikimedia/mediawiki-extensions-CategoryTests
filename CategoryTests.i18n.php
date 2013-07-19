@@ -341,6 +341,13 @@ $messages['li'] = array(
 	'categorytests-desc' => 'Functies veur categorieteste',
 );
 
+/** Lithuanian (lietuvių)
+ * @author Eitvys200
+ */
+$messages['lt'] = array(
+	'categorytests-desc' => 'Kategorijų bandymo funkcijos',
+);
+
 /** Latgalian (latgaļu)
  * @author Dark Eagle
  */
