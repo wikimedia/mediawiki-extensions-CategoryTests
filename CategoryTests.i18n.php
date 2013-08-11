@@ -383,6 +383,13 @@ $messages['mk'] = array(
 	'categorytests-desc' => 'Функции за тестирање на категории',
 );
 
+/** Marathi (मराठी)
+ * @author V.narsikar
+ */
+$messages['mr'] = array(
+	'categorytests-desc' => 'वर्ग तपासण्यासाठी असलेल्या क्रिया',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
