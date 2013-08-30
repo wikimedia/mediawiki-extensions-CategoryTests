@@ -70,6 +70,13 @@ $messages['bar'] = array(
 	'categorytests-desc' => 'Funkzionen zum Testn vu Kategorien',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'categorytests-desc' => 'Punksyon para sa pagprubar nin kategoriya',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Jim-by
  */
