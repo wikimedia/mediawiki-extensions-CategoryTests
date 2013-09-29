@@ -336,9 +336,10 @@ $messages['kw'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
-	'categorytests-desc' => 'Fonctioune fir Teste vu Kategorien',
+	'categorytests-desc' => 'Funktioune fir Teste vu Kategorien',
 );
 
 /** Limburgish (Limburgs)
