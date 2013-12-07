@@ -119,7 +119,7 @@ $messages['cps'] = array(
 	'categorytests-desc' => 'Gamit para sa pagtesting sang kategorya',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
