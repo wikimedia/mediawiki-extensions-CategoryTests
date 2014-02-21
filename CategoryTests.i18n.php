@@ -527,6 +527,13 @@ $messages['sah'] = array(
 	'categorytests-desc' => 'Категориялары тургутар функциялар',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'categorytests-desc' => 'Functions fer category testin',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
