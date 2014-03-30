@@ -15,12 +15,13 @@ $wgHooks['ParserFirstCallInit'][] = 'wfCategoryTests';
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Category Tests',
-	'version' => '1.5',
+	'version' => '1.6.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:CategoryTests',
 	'author' => 'Ryan Schmidt',
 	'descriptionmsg' => 'categorytests-desc',
 );
 
+$wgMessagesDirs['CategoryTests'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['CategoryTests'] = dirname( __FILE__ ) . '/CategoryTests.i18n.php';
 $wgExtensionMessagesFiles['CategoryTestsMagic'] = dirname( __FILE__ ) . '/CategoryTests.i18n.magic.php';
 
@@ -31,7 +32,7 @@ function wfCategoryTests( $parser ) {
 	$parser->setFunctionHook( 'ifcategory', array( &$wgExtCategoryTests, 'ifcategory' ) );
 	$parser->setFunctionHook( 'ifnocategories', array( &$wgExtCategoryTests, 'ifnocategories' ) );
 	$parser->setFunctionHook( 'switchcategory', array( &$wgExtCategoryTests, 'switchcategory' ) );
-	
+
 	return true;
 }
 
