@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Cimon Avaro",
-            "Crt"
-        ]
-    },
-    "categorytests-desc": "Funktioita luokkien testaamiseen."
+	"@metadata": {
+		"authors": [
+			"Cimon Avaro",
+			"Crt"
+		]
+	},
+	"categorytests-desc": "Funktioita luokkien testaamiseen."
 }

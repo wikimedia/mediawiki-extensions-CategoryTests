@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Siebrand"
-        ]
-    },
-    "categorytests-desc": "Functies voor categorietests"
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"categorytests-desc": "Functies voor categorietests"
 }

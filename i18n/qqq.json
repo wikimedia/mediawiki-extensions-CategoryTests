@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Fryed-peach",
-            "Shirayuki"
-        ]
-    },
-    "categorytests-desc": "{{desc|name=Category Tests|url=http://www.mediawiki.org/wiki/Extension:CategoryTests}}"
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Shirayuki"
+		]
+	},
+	"categorytests-desc": "{{desc|name=Category Tests|url=http://www.mediawiki.org/wiki/Extension:CategoryTests}}"
 }
