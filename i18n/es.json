@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Crazymadlover"
+			"Crazymadlover",
+			"Macofe"
 		]
 	},
-	"categorytests-desc": "Funciones para prueba de categoría"
+	"categorytests-desc": "Funciones para pruebas de categorías"
 }
