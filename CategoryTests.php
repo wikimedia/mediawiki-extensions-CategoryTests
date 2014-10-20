@@ -22,8 +22,8 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 $wgMessagesDirs['CategoryTests'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['CategoryTests'] = dirname( __FILE__ ) . '/CategoryTests.i18n.php';
-$wgExtensionMessagesFiles['CategoryTestsMagic'] = dirname( __FILE__ ) . '/CategoryTests.i18n.magic.php';
+$wgExtensionMessagesFiles['CategoryTests'] = __DIR__ . '/CategoryTests.i18n.php';
+$wgExtensionMessagesFiles['CategoryTestsMagic'] = __DIR__ . '/CategoryTests.i18n.magic.php';
 
 function wfCategoryTests( $parser ) {
 	global $wgExtCategoryTests;
@@ -47,8 +47,9 @@ class ExtCategoryTests {
 			$ns = $title->getNamespace();
 		} else {
 			$title = Title::newFromText( $pagename );
-			if ( !( $title instanceOf Title ) || !$title->exists() )
+			if ( !( $title instanceOf Title ) || !$title->exists() ) {
 				return $else;
+			}
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
@@ -57,15 +58,22 @@ class ExtCategoryTests {
 			return $else;
 		}
 		$catkey = $cattitle->getDBkey();
-		$db = wfGetDB( DB_SLAVE );
-		$res = $db->select( array( 'page', 'categorylinks' ), 'cl_from', array(
-					'page_id=cl_from',
-					'page_namespace' => $ns,
-					'page_title' => $page,
-					'cl_to' => $catkey ), __METHOD__,
-					array( 'LIMIT' => 1 ) );
-		if ( $db->numRows( $res ) == 0 )
+		$dbr = wfGetDB( DB_SLAVE );
+		$res = $dbr->select(
+			array( 'page', 'categorylinks' ),
+			'cl_from',
+			array(
+				'page_id=cl_from',
+				'page_namespace' => $ns,
+				'page_title' => $page,
+				'cl_to' => $catkey
+			),
+			__METHOD__,
+			array( 'LIMIT' => 1 )
+		);
+		if ( $dbr->numRows( $res ) == 0 ) {
 			return $else;
+		}
 		return $then;
 	}
 
@@ -76,19 +84,27 @@ class ExtCategoryTests {
 			$ns = $title->getNamespace();
 		} else {
 			$title = Title::newFromText( $pagename );
-			if ( !( $title instanceOf Title ) || !$title->exists() )
+			if ( !( $title instanceOf Title ) || !$title->exists() ) {
 				return $then;
+			}
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
-		$db = wfGetDB( DB_SLAVE );
-		$res = $db->select( array( 'page', 'categorylinks' ), 'cl_from', array(
-					'page_id=cl_from',
-					'page_namespace' => $ns,
-					'page_title' => $page ), __METHOD__,
-					array( 'LIMIT' => 1 ) );
-		if ( $db->numRows( $res ) == 0 )
+		$dbr = wfGetDB( DB_SLAVE );
+		$res = $dbr->select(
+			array( 'page', 'categorylinks' ),
+			'cl_from',
+			array(
+				'page_id=cl_from',
+				'page_namespace' => $ns,
+				'page_title' => $page
+			),
+			__METHOD__,
+			array( 'LIMIT' => 1 )
+		);
+		if ( $dbr->numRows( $res ) == 0 ) {
 			return $then;
+		}
 		return $else;
 	}
 
