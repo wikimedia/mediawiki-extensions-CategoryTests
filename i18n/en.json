@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ryan Schmidt"
-        ]
-    },
-    "categorytests-desc": "Functions for category testing"
+	"@metadata": {
+		"authors": [
+			"Ryan Schmidt"
+		]
+	},
+	"categorytests-desc": "Functions for category testing"
 }
