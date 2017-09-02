@@ -58,7 +58,7 @@ class ExtCategoryTests {
 			return $else;
 		}
 		$catkey = $cattitle->getDBkey();
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			array( 'page', 'categorylinks' ),
 			'cl_from',
@@ -90,7 +90,7 @@ class ExtCategoryTests {
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			array( 'page', 'categorylinks' ),
 			'cl_from',
