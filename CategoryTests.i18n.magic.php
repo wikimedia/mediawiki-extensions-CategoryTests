@@ -3,15 +3,15 @@
  * Magic word localization for the CategoryTests extension
  */
 
-$magicWords = array();
+$magicWords = [];
 
 /** English
  * @author Ryan Schmidt
-*/
-$magicWords['en'] = array(
-	'ifcategory'     => array( 0, 'ifcategory' ),
-	'ifnocategories' => array( 0, 'ifnocategories' ),
-	'switchcategory' => array( 0, 'switchcategory' ),
-	'default'        => array( 0, '#default' ),
-	'page'           => array( 0, '#page' )
-);
+ */
+$magicWords['en'] = [
+	'ifcategory'     => [ 0, 'ifcategory' ],
+	'ifnocategories' => [ 0, 'ifnocategories' ],
+	'switchcategory' => [ 0, 'switchcategory' ],
+	'default'        => [ 0, '#default' ],
+	'page'           => [ 0, '#page' ]
+];
