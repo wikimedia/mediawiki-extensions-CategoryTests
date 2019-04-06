@@ -15,14 +15,14 @@ class ExtCategoryTests {
 			$ns = $title->getNamespace();
 		} else {
 			$title = Title::newFromText( $pagename );
-			if ( !( $title instanceOf Title ) || !$title->exists() ) {
+			if ( !( $title instanceof Title ) || !$title->exists() ) {
 				return $else;
 			}
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
 		$cattitle = Title::makeTitleSafe( NS_CATEGORY, $category );
-		if ( !( $cattitle instanceOf Title ) ) {
+		if ( !( $cattitle instanceof Title ) ) {
 			return $else;
 		}
 		$catkey = $cattitle->getDBkey();
@@ -52,7 +52,7 @@ class ExtCategoryTests {
 			$ns = $title->getNamespace();
 		} else {
 			$title = Title::newFromText( $pagename );
-			if ( !( $title instanceOf Title ) || !$title->exists() ) {
+			if ( !( $title instanceof Title ) || !$title->exists() ) {
 				return $then;
 			}
 			$page = $title->getDBkey();
