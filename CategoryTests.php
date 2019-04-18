@@ -2,7 +2,7 @@
 /*
 * CategoryTests extension by Ryan Schmidt
 * Functions for category testing
-* Check http://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
+* Check https://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
 */
 
 if ( function_exists( 'wfLoadExtension' ) ) {
