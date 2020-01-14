@@ -108,7 +108,7 @@ class ExtCategoryTests {
 
 		if ( count( $parts ) == 1 ) {
 			return $parts[0];
-		} elseif ( !is_null( $default ) ) {
+		} elseif ( $default !== null ) {
 			return $default;
 		} else {
 			return '';
