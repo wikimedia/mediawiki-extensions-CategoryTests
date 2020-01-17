@@ -83,10 +83,12 @@ class ExtCategoryTests {
 		$parts = null;
 		$default = null;
 		$page = '';
+		$magicWordFactory = \MediaWiki\MediaWikiServices::getInstance()->getMagicWordFactory();
+
 		foreach ( $args as $arg ) {
 			$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
 			if ( count( $parts ) == 2 ) {
-				$mwPage = MagicWord::get( 'page' );
+				$mwPage = $magicWordFactory->get( 'page' );
 				if ( $mwPage->matchStartAndRemove( $parts[0] ) ) {
 					$page = $parts[1];
 					continue;
@@ -94,7 +96,7 @@ class ExtCategoryTests {
 				if ( $found || $this->ifcategory( $parser, $parts[0], true, false, $page ) ) {
 					return $parts[1];
 				} else {
-					$mwDefault = MagicWord::get( 'default' );
+					$mwDefault = $magicWordFactory->get( 'default' );
 					if ( $mwDefault->matchStartAndRemove( $parts[0] ) ) {
 						$default = $parts[1];
 					}
