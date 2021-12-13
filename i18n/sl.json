@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"categorytests-desc": "Funkcije za testiranje kategorij"
+	"categorytests-desc": "Funkcije za preizkušanje kategorij"
 }
