@@ -39,7 +39,7 @@ class ExtCategoryTests {
 			__METHOD__,
 			[ 'LIMIT' => 1 ]
 		);
-		if ( $dbr->numRows( $res ) == 0 ) {
+		if ( $res->numRows() == 0 ) {
 			return $else;
 		}
 		return $then;
@@ -70,7 +70,7 @@ class ExtCategoryTests {
 			__METHOD__,
 			[ 'LIMIT' => 1 ]
 		);
-		if ( $dbr->numRows( $res ) == 0 ) {
+		if ( $res->numRows() == 0 ) {
 			return $then;
 		}
 		return $else;
