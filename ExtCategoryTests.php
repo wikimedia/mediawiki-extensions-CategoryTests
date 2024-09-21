@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * CategoryTests extension by Ryan Schmidt
  * Functions for category testing
@@ -26,7 +29,7 @@ class ExtCategoryTests {
 			return $else;
 		}
 		$catkey = $cattitle->getDBkey();
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			[ 'page', 'categorylinks' ],
 			'cl_from',
@@ -58,7 +61,7 @@ class ExtCategoryTests {
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			[ 'page', 'categorylinks' ],
 			'cl_from',
