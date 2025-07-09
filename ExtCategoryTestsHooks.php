@@ -1,7 +1,9 @@
 <?php
 
-class ExtCategoryTestsHooks {
-	public static function onParserFirstCallInit( $parser ) {
+class ExtCategoryTestsHooks implements
+	\MediaWiki\Hook\ParserFirstCallInitHook
+{
+	public function onParserFirstCallInit( $parser ) {
 		global $wgExtCategoryTests;
 
 		$wgExtCategoryTests = new ExtCategoryTests();

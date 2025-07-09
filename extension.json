@@ -21,8 +21,13 @@
 		"ExtCategoryTests": "ExtCategoryTests.php",
 		"ExtCategoryTestsHooks": "ExtCategoryTestsHooks.php"
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "ExtCategoryTestsHooks"
+		}
+	},
 	"Hooks": {
-		"ParserFirstCallInit": "ExtCategoryTestsHooks::onParserFirstCallInit"
+		"ParserFirstCallInit": "main"
 	},
 	"manifest_version": 1
 }
