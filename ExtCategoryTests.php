@@ -87,7 +87,7 @@ class ExtCategoryTests {
 		$parts = null;
 		$default = null;
 		$page = '';
-		$magicWordFactory = \MediaWiki\MediaWikiServices::getInstance()->getMagicWordFactory();
+		$magicWordFactory = MediaWikiServices::getInstance()->getMagicWordFactory();
 
 		foreach ( $args as $arg ) {
 			$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
