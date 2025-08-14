@@ -3,8 +3,8 @@
 namespace MediaWiki\Extension\CategoryTests;
 
 use MediaWiki\Parser\MagicWordFactory;
+use MediaWiki\Parser\Parser;
 use MediaWiki\Title\Title;
-use Parser;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**

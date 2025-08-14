@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\CategoryTests;
 
 use MediaWiki\Parser\MagicWordFactory;
-use Parser;
+use MediaWiki\Parser\Parser;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 class Hooks implements
