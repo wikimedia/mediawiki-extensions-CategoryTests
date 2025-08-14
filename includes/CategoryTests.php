@@ -64,7 +64,7 @@ class CategoryTests {
 			__METHOD__,
 			[ 'LIMIT' => 1 ]
 		);
-		if ( $res->numRows() == 0 ) {
+		if ( $res->numRows() === 0 ) {
 			return $else;
 		}
 		return $then;
@@ -100,24 +100,23 @@ class CategoryTests {
 			__METHOD__,
 			[ 'LIMIT' => 1 ]
 		);
-		if ( $res->numRows() == 0 ) {
+		if ( $res->numRows() === 0 ) {
 			return $then;
 		}
 		return $else;
 	}
 
 	public function switchcategory(
-		Parser $parser
+		Parser $parser,
+		string ...$args,
 	): string {
-		$args = func_get_args();
-		array_shift( $args );
 		$found = false;
 		$parts = [];
 		$default = null;
 		$page = '';
 		foreach ( $args as $arg ) {
 			$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
-			if ( count( $parts ) == 2 ) {
+			if ( count( $parts ) === 2 ) {
 				$mwPage = $this->magicWordFactory->get( 'page' );
 				if ( $mwPage->matchStartAndRemove( $parts[0] ) ) {
 					$page = $parts[1];
@@ -131,14 +130,14 @@ class CategoryTests {
 						$default = $parts[1];
 					}
 				}
-			} elseif ( count( $parts ) == 1 ) {
+			} elseif ( count( $parts ) === 1 ) {
 				if ( $this->ifcategory( $parser, $parts[0], '1', '', $page ) ) {
 					$found = true;
 				}
 			}
 		}
 
-		if ( count( $parts ) == 1 ) {
+		if ( count( $parts ) === 1 ) {
 			return $parts[0];
 		} elseif ( $default !== null ) {
 			return $default;
