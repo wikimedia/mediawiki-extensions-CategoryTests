@@ -5,7 +5,7 @@ namespace MediaWiki\Extension\CategoryTests;
 use MediaWiki\Parser\MagicWordFactory;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Title\Title;
-use Wikimedia\Rdbms\ILoadBalancer;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 /**
  * CategoryTests extension by Ryan Schmidt
@@ -13,14 +13,14 @@ use Wikimedia\Rdbms\ILoadBalancer;
  * Check https://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
  */
 class CategoryTests {
-	private ILoadBalancer $loadBalancer;
+	private IConnectionProvider $dbProvider;
 	private MagicWordFactory $magicWordFactory;
 
 	public function __construct(
-		ILoadBalancer $loadBalancer,
+		IConnectionProvider $dbProvider,
 		MagicWordFactory $magicWordFactory
 	) {
-		$this->loadBalancer = $loadBalancer;
+		$this->dbProvider = $dbProvider;
 		$this->magicWordFactory = $magicWordFactory;
 	}
 
@@ -51,7 +51,7 @@ class CategoryTests {
 			return $else;
 		}
 		$catkey = $cattitle->getDBkey();
-		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		$res = $dbr->select(
 			[ 'page', 'categorylinks' ],
 			'cl_from',
@@ -88,7 +88,7 @@ class CategoryTests {
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
-		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		$res = $dbr->select(
 			[ 'page', 'categorylinks' ],
 			'cl_from',

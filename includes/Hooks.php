@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\CategoryTests;
 
 use MediaWiki\Parser\MagicWordFactory;
 use MediaWiki\Parser\Parser;
-use Wikimedia\Rdbms\ILoadBalancer;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class Hooks implements
 	\MediaWiki\Hook\ParserFirstCallInitHook
@@ -12,11 +12,11 @@ class Hooks implements
 	private CategoryTests $categoryTests;
 
 	public function __construct(
-		ILoadBalancer $loadBalancer,
+		IConnectionProvider $dbProvider,
 		MagicWordFactory $magicWordFactory
 	) {
 		$this->categoryTests = new CategoryTests(
-			$loadBalancer,
+			$dbProvider,
 			$magicWordFactory
 		);
 	}
