@@ -22,7 +22,11 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\Extension\\CategoryTests\\Hooks"
+			"class": "MediaWiki\\Extension\\CategoryTests\\Hooks",
+			"services": [
+				"DBLoadBalancer",
+				"MagicWordFactory"
+			]
 		}
 	},
 	"Hooks": {

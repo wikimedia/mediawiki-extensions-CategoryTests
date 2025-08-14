@@ -2,15 +2,23 @@
 
 namespace MediaWiki\Extension\CategoryTests;
 
+use MediaWiki\Parser\MagicWordFactory;
 use Parser;
+use Wikimedia\Rdbms\ILoadBalancer;
 
 class Hooks implements
 	\MediaWiki\Hook\ParserFirstCallInitHook
 {
 	private CategoryTests $categoryTests;
 
-	public function __construct() {
-		$this->categoryTests = new CategoryTests();
+	public function __construct(
+		ILoadBalancer $loadBalancer,
+		MagicWordFactory $magicWordFactory
+	) {
+		$this->categoryTests = new CategoryTests(
+			$loadBalancer,
+			$magicWordFactory
+		);
 	}
 
 	/**

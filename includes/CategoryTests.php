@@ -2,9 +2,10 @@
 
 namespace MediaWiki\Extension\CategoryTests;
 
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\MagicWordFactory;
 use MediaWiki\Title\Title;
 use Parser;
+use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
  * CategoryTests extension by Ryan Schmidt
@@ -12,6 +13,17 @@ use Parser;
  * Check https://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
  */
 class CategoryTests {
+	private ILoadBalancer $loadBalancer;
+	private MagicWordFactory $magicWordFactory;
+
+	public function __construct(
+		ILoadBalancer $loadBalancer,
+		MagicWordFactory $magicWordFactory
+	) {
+		$this->loadBalancer = $loadBalancer;
+		$this->magicWordFactory = $magicWordFactory;
+	}
+
 	/**
 	 * @param Parser $parser
 	 * @param string $category
@@ -41,7 +53,7 @@ class CategoryTests {
 			return $else;
 		}
 		$catkey = $cattitle->getDBkey();
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			[ 'page', 'categorylinks' ],
 			'cl_from',
@@ -80,7 +92,7 @@ class CategoryTests {
 			$page = $title->getDBkey();
 			$ns = $title->getNamespace();
 		}
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			[ 'page', 'categorylinks' ],
 			'cl_from',
@@ -109,12 +121,10 @@ class CategoryTests {
 		$parts = [];
 		$default = null;
 		$page = '';
-		$magicWordFactory = MediaWikiServices::getInstance()->getMagicWordFactory();
-
 		foreach ( $args as $arg ) {
 			$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
 			if ( count( $parts ) == 2 ) {
-				$mwPage = $magicWordFactory->get( 'page' );
+				$mwPage = $this->magicWordFactory->get( 'page' );
 				if ( $mwPage->matchStartAndRemove( $parts[0] ) ) {
 					$page = $parts[1];
 					continue;
@@ -122,7 +132,7 @@ class CategoryTests {
 				if ( $found || $this->ifcategory( $parser, $parts[0], '1', '', $page ) ) {
 					return $parts[1];
 				} else {
-					$mwDefault = $magicWordFactory->get( 'default' );
+					$mwDefault = $this->magicWordFactory->get( 'default' );
 					if ( $mwDefault->matchStartAndRemove( $parts[0] ) ) {
 						$default = $parts[1];
 					}
