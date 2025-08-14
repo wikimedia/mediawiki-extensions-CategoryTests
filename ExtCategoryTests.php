@@ -9,7 +9,15 @@ use MediaWiki\Title\Title;
  * Check https://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
  */
 class ExtCategoryTests {
-	function ifcategory( &$parser, $category = '', $then = '', $else = '', $pagename = '' ) {
+	/**
+	 * @param Parser &$parser
+	 * @param string $category
+	 * @param string $then
+	 * @param string $else
+	 * @param string $pagename
+	 * @return string
+	 */
+	public function ifcategory( &$parser, $category = '', $then = '', $else = '', $pagename = '' ) {
 		if ( $category === '' ) {
 			return $then;
 		}
@@ -49,7 +57,14 @@ class ExtCategoryTests {
 		return $then;
 	}
 
-	function ifnocategories( &$parser, $then = '', $else = '', $pagename = '' ) {
+	/**
+	 * @param Parser &$parser
+	 * @param string $then
+	 * @param string $else
+	 * @param string $pagename
+	 * @return string
+	 */
+	public function ifnocategories( &$parser, $then = '', $else = '', $pagename = '' ) {
 		if ( $pagename === '' ) {
 			$title = $parser->getTitle();
 			$page = $title->getDBkey();
@@ -80,7 +95,11 @@ class ExtCategoryTests {
 		return $else;
 	}
 
-	function switchcategory( &$parser ) {
+	/**
+	 * @param Parser &$parser
+	 * @return string
+	 */
+	public function switchcategory( &$parser ) {
 		$args = func_get_args();
 		array_shift( $args );
 		$found = false;

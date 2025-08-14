@@ -3,6 +3,9 @@
 class ExtCategoryTestsHooks implements
 	\MediaWiki\Hook\ParserFirstCallInitHook
 {
+	/**
+	 * @param Parser $parser
+	 */
 	public function onParserFirstCallInit( $parser ) {
 		global $wgExtCategoryTests;
 
