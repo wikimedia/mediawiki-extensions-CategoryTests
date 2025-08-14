@@ -24,15 +24,13 @@ class CategoryTests {
 		$this->magicWordFactory = $magicWordFactory;
 	}
 
-	/**
-	 * @param Parser $parser
-	 * @param string $category
-	 * @param string $then
-	 * @param string $else
-	 * @param string $pagename
-	 * @return string
-	 */
-	public function ifcategory( $parser, $category = '', $then = '', $else = '', $pagename = '' ) {
+	public function ifcategory(
+		Parser $parser,
+		string $category = '',
+		string $then = '',
+		string $else = '',
+		string $pagename = ''
+	): string {
 		if ( $category === '' ) {
 			return $then;
 		}
@@ -72,14 +70,12 @@ class CategoryTests {
 		return $then;
 	}
 
-	/**
-	 * @param Parser $parser
-	 * @param string $then
-	 * @param string $else
-	 * @param string $pagename
-	 * @return string
-	 */
-	public function ifnocategories( $parser, $then = '', $else = '', $pagename = '' ) {
+	public function ifnocategories(
+		Parser $parser,
+		string $then = '',
+		string $else = '',
+		string $pagename = ''
+	): string {
 		if ( $pagename === '' ) {
 			$title = $parser->getTitle();
 			$page = $title->getDBkey();
@@ -110,11 +106,9 @@ class CategoryTests {
 		return $else;
 	}
 
-	/**
-	 * @param Parser $parser
-	 * @return string
-	 */
-	public function switchcategory( $parser ) {
+	public function switchcategory(
+		Parser $parser
+	): string {
 		$args = func_get_args();
 		array_shift( $args );
 		$found = false;
