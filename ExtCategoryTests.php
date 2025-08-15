@@ -103,7 +103,7 @@ class ExtCategoryTests {
 		$args = func_get_args();
 		array_shift( $args );
 		$found = false;
-		$parts = null;
+		$parts = [];
 		$default = null;
 		$page = '';
 		$magicWordFactory = MediaWikiServices::getInstance()->getMagicWordFactory();
@@ -116,7 +116,7 @@ class ExtCategoryTests {
 					$page = $parts[1];
 					continue;
 				}
-				if ( $found || $this->ifcategory( $parser, $parts[0], true, false, $page ) ) {
+				if ( $found || $this->ifcategory( $parser, $parts[0], '1', '', $page ) ) {
 					return $parts[1];
 				} else {
 					$mwDefault = $magicWordFactory->get( 'default' );
@@ -125,7 +125,7 @@ class ExtCategoryTests {
 					}
 				}
 			} elseif ( count( $parts ) == 1 ) {
-				if ( $this->ifcategory( $parser, $parts[0], true, false, $page ) ) {
+				if ( $this->ifcategory( $parser, $parts[0], '1', '', $page ) ) {
 					$found = true;
 				}
 			}
