@@ -1,0 +1,208 @@
+!! options
+version=2
+parsoid-compatible=wt2html
+!! end
+
+!! test
+Empty ifcategory, ifnocategories and switchcategory
+!! wikitext
+{{#ifcategory:}}{{#ifnocategories:}}{{#switchcategory:}}
+!! html/php
+!! html/parsoid
+<span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifcategory:","function":"ifcategory"},"params":{},"i":0}}]}'></span><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifnocategories:","function":"ifnocategories"},"params":{},"i":0}}]}'></span><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:","function":"switchcategory"},"params":{},"i":0}}]}'></span>
+!! end
+
+!! test
+ifcategory with empty category
+!! wikitext
+{{#ifcategory:|THEN|ELSE}}
+!! html/php
+<p>THEN
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifcategory:","function":"ifcategory"},"params":{"1":{"wt":"THEN"},"2":{"wt":"ELSE"}},"i":0}}]}'>THEN</span></p>
+!! end
+
+!! test
+ifcategory with invalid category
+!! wikitext
+{{#ifcategory:Inva<lid|THEN|ELSE}}
+!! html/php
+<p>ELSE
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifcategory:Inva&lt;lid","function":"ifcategory"},"params":{"1":{"wt":"THEN"},"2":{"wt":"ELSE"}},"i":0}}]}'>ELSE</span></p>
+!! end
+
+!! test
+ifcategory on not existing category
+!! wikitext
+{{#ifcategory:doesnotexist|THEN|ELSE}}
+!! html/php
+<p>ELSE
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifcategory:doesnotexist","function":"ifcategory"},"params":{"1":{"wt":"THEN"},"2":{"wt":"ELSE"}},"i":0}}]}'>ELSE</span></p>
+!! end
+
+!! article
+Category:CategoryTest test category
+!! text
+!! endarticle
+
+!! article
+CategoryTest test article
+!! text
+[[Category:CategoryTest test category]]
+!! endarticle
+
+!! test
+ifcategory on existing category
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#ifcategory:CategoryTest test category|THEN|ELSE}}
+!! html/php
+<p>THEN
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifcategory:CategoryTest test category","function":"ifcategory"},"params":{"1":{"wt":"THEN"},"2":{"wt":"ELSE"}},"i":0}}]}'>THEN</span></p>
+!! end
+
+!! test
+ifcategory on existing category with explicite title
+!! wikitext
+{{#ifcategory:CategoryTest test category|THEN|ELSE|CategoryTest test article}}
+!! html/php
+<p>THEN
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifcategory:CategoryTest test category","function":"ifcategory"},"params":{"1":{"wt":"THEN"},"2":{"wt":"ELSE"},"3":{"wt":"CategoryTest test article"}},"i":0}}]}'>THEN</span></p>
+!! end
+
+!! test
+ifnocategories on article with categories
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#ifnocategories:THEN|ELSE}}
+!! html/php
+<p>ELSE
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifnocategories:THEN","function":"ifnocategories"},"params":{"1":{"wt":"ELSE"}},"i":0}}]}'>ELSE</span></p>
+!! end
+
+!! test
+ifnocategories on article with categories with explicite title
+!! wikitext
+{{#ifnocategories:THEN|ELSE|CategoryTest test article}}
+!! html/php
+<p>ELSE
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifnocategories:THEN","function":"ifnocategories"},"params":{"1":{"wt":"ELSE"},"2":{"wt":"CategoryTest test article"}},"i":0}}]}'>ELSE</span></p>
+!! end
+
+!! article
+CategoryTest empty test article
+!! text
+!! endarticle
+
+!! test
+ifnocategories on article without categories
+!! wikitext
+{{#ifnocategories:THEN|ELSE|CategoryTest empty test article}}
+!! html/php
+<p>THEN
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifnocategories:THEN","function":"ifnocategories"},"params":{"1":{"wt":"ELSE"},"2":{"wt":"CategoryTest empty test article"}},"i":0}}]}'>THEN</span></p>
+!! end
+
+!! test
+ifnocategories on not existing article
+!! wikitext
+{{#ifnocategories:THEN|ELSE|CategoryTest article doesn't exist}}
+!! html/php
+<p>THEN
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#ifnocategories:THEN","function":"ifnocategories"},"params":{"1":{"wt":"ELSE"},"2":{"wt":"CategoryTest article doesn&apos;t exist"}},"i":0}}]}'>THEN</span></p>
+!! end
+
+!! test
+switchcategory test with #page
+!! wikitext
+{{#switchcategory:#page=CategoryTest test article|CategoryTest category doesn't exist=SWITCH1|CategoryTest test category=SWITCH2}}
+!! html/php
+<p>SWITCH2
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:#page=CategoryTest test article","function":"switchcategory"},"params":{"CategoryTest category doesn&apos;t exist":{"wt":"SWITCH1"},"CategoryTest test category":{"wt":"SWITCH2"}},"i":0}}]}'>SWITCH2</span></p>
+!! end
+
+!! test
+switchcategory test with DEFAULT
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#switchcategory:CategoryTest category 1=SWITCH1|CategoryTest category 2|DEFAULT}}
+!! html/php
+<p>DEFAULT
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"2":{"wt":"DEFAULT"}},"i":0}}]}'>DEFAULT</span></p>
+!! end
+
+!! test
+switchcategory test with #default
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#switchcategory:CategoryTest category 1=SWITCH1|CategoryTest category 2|#default=DEFAULT}}
+!! html/php
+<p>DEFAULT
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"#default":{"wt":"DEFAULT"}},"i":0}}]}'>DEFAULT</span></p>
+!! end
+
+!! test
+switchcategory test with #default with =
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#switchcategory:CategoryTest category 1=SWITCH1|CategoryTest category 2|#default=DEF=AULT}}
+!! html/php
+<p>DEF=AULT
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"#default":{"wt":"DEF=AULT"}},"i":0}}]}'>DEF=AULT</span></p>
+!! end
+
+!! test
+switchcategory test with =
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#switchcategory:CategoryTest category doesn't exist=SWITCH1|CategoryTest test category=SWITCH2}}
+!! html/php
+<p>SWITCH2
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category doesn&apos;t exist=SWITCH1","function":"switchcategory"},"params":{"CategoryTest test category":{"wt":"SWITCH2"}},"i":0}}]}'>SWITCH2</span></p>
+!! end
+
+!! test
+switchcategory test without =
+!! options
+title=[[CategoryTest test article]]
+!! wikitext
+{{#switchcategory:CategoryTest category doesn't exist|CategoryTest test category}}
+!! html/php
+<p>CategoryTest test category
+</p>
+!! html/parsoid
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category doesn&apos;t exist","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest test category"}},"i":0}}]}'>CategoryTest test category</span></p>
+!! end
