@@ -13,15 +13,10 @@ use Wikimedia\Rdbms\IConnectionProvider;
  * Check https://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
  */
 class CategoryTests {
-	private IConnectionProvider $dbProvider;
-	private MagicWordFactory $magicWordFactory;
-
 	public function __construct(
-		IConnectionProvider $dbProvider,
-		MagicWordFactory $magicWordFactory
+		private readonly IConnectionProvider $dbProvider,
+		private readonly MagicWordFactory $magicWordFactory,
 	) {
-		$this->dbProvider = $dbProvider;
-		$this->magicWordFactory = $magicWordFactory;
 	}
 
 	public function ifcategory(
@@ -29,7 +24,7 @@ class CategoryTests {
 		string $category = '',
 		string $then = '',
 		string $else = '',
-		string $pagename = ''
+		string $pagename = '',
 	): string {
 		if ( $category === '' ) {
 			return $then;
@@ -59,7 +54,7 @@ class CategoryTests {
 				'page_id=cl_from',
 				'page_namespace' => $ns,
 				'page_title' => $page,
-				'cl_to' => $catkey
+				'cl_to' => $catkey,
 			],
 			__METHOD__,
 			[ 'LIMIT' => 1 ]
@@ -74,7 +69,7 @@ class CategoryTests {
 		Parser $parser,
 		string $then = '',
 		string $else = '',
-		string $pagename = ''
+		string $pagename = '',
 	): string {
 		if ( $pagename === '' ) {
 			$title = $parser->getTitle();
@@ -95,7 +90,7 @@ class CategoryTests {
 			[
 				'page_id=cl_from',
 				'page_namespace' => $ns,
-				'page_title' => $page
+				'page_title' => $page,
 			],
 			__METHOD__,
 			[ 'LIMIT' => 1 ]

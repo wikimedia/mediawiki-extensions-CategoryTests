@@ -9,11 +9,11 @@ use Wikimedia\Rdbms\IConnectionProvider;
 class Hooks implements
 	\MediaWiki\Hook\ParserFirstCallInitHook
 {
-	private CategoryTests $categoryTests;
+	private readonly CategoryTests $categoryTests;
 
 	public function __construct(
 		IConnectionProvider $dbProvider,
-		MagicWordFactory $magicWordFactory
+		MagicWordFactory $magicWordFactory,
 	) {
 		$this->categoryTests = new CategoryTests(
 			$dbProvider,
