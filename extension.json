@@ -17,13 +17,12 @@
 	"ExtensionMessagesFiles": {
 		"CategoryTestsMagic": "CategoryTests.i18n.magic.php"
 	},
-	"AutoloadClasses": {
-		"ExtCategoryTests": "ExtCategoryTests.php",
-		"ExtCategoryTestsHooks": "ExtCategoryTestsHooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\CategoryTests\\": "includes/"
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "ExtCategoryTestsHooks"
+			"class": "MediaWiki\\Extension\\CategoryTests\\Hooks"
 		}
 	},
 	"Hooks": {

@@ -1,6 +1,10 @@
 <?php
 
-class ExtCategoryTestsHooks implements
+namespace MediaWiki\Extension\CategoryTests;
+
+use Parser;
+
+class Hooks implements
 	\MediaWiki\Hook\ParserFirstCallInitHook
 {
 	/**
@@ -9,7 +13,7 @@ class ExtCategoryTestsHooks implements
 	public function onParserFirstCallInit( $parser ) {
 		global $wgExtCategoryTests;
 
-		$wgExtCategoryTests = new ExtCategoryTests();
+		$wgExtCategoryTests = new CategoryTests();
 		$parser->setFunctionHook( 'ifcategory', [ &$wgExtCategoryTests, 'ifcategory' ] );
 		$parser->setFunctionHook( 'ifnocategories', [ &$wgExtCategoryTests, 'ifnocategories' ] );
 		$parser->setFunctionHook( 'switchcategory', [ &$wgExtCategoryTests, 'switchcategory' ] );

@@ -1,14 +1,17 @@
 <?php
 
+namespace MediaWiki\Extension\CategoryTests;
+
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Parser;
 
 /**
  * CategoryTests extension by Ryan Schmidt
  * Functions for category testing
  * Check https://www.mediawiki.org/wiki/Extension:CategoryTests for more info on what everything does
  */
-class ExtCategoryTests {
+class CategoryTests {
 	/**
 	 * @param Parser $parser
 	 * @param string $category
