@@ -30,17 +30,15 @@ class CategoryTests {
 			return $then;
 		}
 		if ( $pagename === '' ) {
-			$title = $parser->getTitle();
-			$page = $title->getDBkey();
-			$ns = $title->getNamespace();
+			$title = $parser->getPage();
 		} else {
 			$title = Title::newFromText( $pagename );
 			if ( !( $title instanceof Title ) || !$title->exists() ) {
 				return $else;
 			}
-			$page = $title->getDBkey();
-			$ns = $title->getNamespace();
 		}
+		$page = $title->getDBkey();
+		$ns = $title->getNamespace();
 		$cattitle = Title::makeTitleSafe( NS_CATEGORY, $category );
 		if ( !( $cattitle instanceof Title ) ) {
 			return $else;
@@ -89,17 +87,15 @@ class CategoryTests {
 		string $pagename = '',
 	): string {
 		if ( $pagename === '' ) {
-			$title = $parser->getTitle();
-			$page = $title->getDBkey();
-			$ns = $title->getNamespace();
+			$title = $parser->getPage();
 		} else {
 			$title = Title::newFromText( $pagename );
 			if ( !( $title instanceof Title ) || !$title->exists() ) {
 				return $then;
 			}
-			$page = $title->getDBkey();
-			$ns = $title->getNamespace();
 		}
+		$page = $title->getDBkey();
+		$ns = $title->getNamespace();
 		$dbr = $this->dbProvider->getReplicaDatabase();
 		$res = $dbr->newSelectQueryBuilder()
 			->select( 'cl_from' )
