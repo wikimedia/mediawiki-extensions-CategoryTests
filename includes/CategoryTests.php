@@ -47,18 +47,18 @@ class CategoryTests {
 		}
 		$catkey = $cattitle->getDBkey();
 		$dbr = $this->dbProvider->getReplicaDatabase();
-		$res = $dbr->select(
-			[ 'page', 'categorylinks' ],
-			'cl_from',
-			[
+		$res = $dbr->newSelectQueryBuilder()
+			->select( 'cl_from' )
+			->tables( [ 'page', 'categorylinks' ] )
+			->where( [
 				'page_id=cl_from',
 				'page_namespace' => $ns,
 				'page_title' => $page,
 				'cl_to' => $catkey,
-			],
-			__METHOD__,
-			[ 'LIMIT' => 1 ]
-		);
+			] )
+			->limit( 1 )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 		if ( $res->numRows() === 0 ) {
 			return $else;
 		}
@@ -84,17 +84,17 @@ class CategoryTests {
 			$ns = $title->getNamespace();
 		}
 		$dbr = $this->dbProvider->getReplicaDatabase();
-		$res = $dbr->select(
-			[ 'page', 'categorylinks' ],
-			'cl_from',
-			[
+		$res = $dbr->newSelectQueryBuilder()
+			->select( 'cl_from' )
+			->tables( [ 'page', 'categorylinks' ] )
+			->where( [
 				'page_id=cl_from',
 				'page_namespace' => $ns,
 				'page_title' => $page,
-			],
-			__METHOD__,
-			[ 'LIMIT' => 1 ]
-		);
+			] )
+			->limit( 1 )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 		if ( $res->numRows() === 0 ) {
 			return $then;
 		}
