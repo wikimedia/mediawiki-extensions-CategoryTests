@@ -139,7 +139,7 @@ switchcategory test with #page
 <p>SWITCH2
 </p>
 !! html/parsoid
-<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:#page=CategoryTest test article","function":"switchcategory"},"params":{"CategoryTest category doesn&apos;t exist":{"wt":"SWITCH1"},"CategoryTest test category":{"wt":"SWITCH2"}},"i":0}}]}'>SWITCH2</span></p>
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:#page=CategoryTest test article","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category doesn&apos;t exist=SWITCH1"},"2":{"wt":"CategoryTest test category=SWITCH2"}},"i":0}}]}'>SWITCH2</span></p>
 !! end
 
 !! test
@@ -165,7 +165,7 @@ title=[[CategoryTest test article]]
 <p>DEFAULT
 </p>
 !! html/parsoid
-<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"#default":{"wt":"DEFAULT"}},"i":0}}]}'>DEFAULT</span></p>
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"2":{"wt":"#default=DEFAULT"}},"i":0}}]}'>DEFAULT</span></p>
 !! end
 
 !! test
@@ -178,7 +178,7 @@ title=[[CategoryTest test article]]
 <p>DEF=AULT
 </p>
 !! html/parsoid
-<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"#default":{"wt":"DEF=AULT"}},"i":0}}]}'>DEF=AULT</span></p>
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category 1=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest category 2"},"2":{"wt":"#default=DEF=AULT"}},"i":0}}]}'>DEF=AULT</span></p>
 !! end
 
 !! test
@@ -191,7 +191,7 @@ title=[[CategoryTest test article]]
 <p>SWITCH2
 </p>
 !! html/parsoid
-<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category doesn&apos;t exist=SWITCH1","function":"switchcategory"},"params":{"CategoryTest test category":{"wt":"SWITCH2"}},"i":0}}]}'>SWITCH2</span></p>
+<p><span typeof="mw:Transclusion" data-mw='{"parts":[{"template":{"target":{"wt":"#switchcategory:CategoryTest category doesn&apos;t exist=SWITCH1","function":"switchcategory"},"params":{"1":{"wt":"CategoryTest test category=SWITCH2"}},"i":0}}]}'>SWITCH2</span></p>
 !! end
 
 !! test

@@ -47,18 +47,35 @@ class CategoryTests {
 		}
 		$catkey = $cattitle->getDBkey();
 		$dbr = $this->dbProvider->getReplicaDatabase();
-		$res = $dbr->newSelectQueryBuilder()
+		$queryBuilder = $dbr->newSelectQueryBuilder()
 			->select( 'cl_from' )
-			->tables( [ 'page', 'categorylinks' ] )
-			->where( [
-				'page_id=cl_from',
-				'page_namespace' => $ns,
-				'page_title' => $page,
-				'cl_to' => $catkey,
-			] )
+			->tables( [ 'page', 'categorylinks' ] );
+		if ( version_compare( MW_VERSION, '1.45', '<' ) ) {
+			// < 1.45
+			$queryBuilder
+				->where( [
+					'page_id=cl_from',
+					'page_namespace' => $ns,
+					'page_title' => $page,
+					'cl_to' => $catkey,
+				] );
+		} else {
+			// 1.45+
+			$queryBuilder
+				->where( [
+					'page_id=cl_from',
+					'page_namespace' => $ns,
+					'page_title' => $page,
+					'lt_title' => $catkey,
+					'lt_namespace' => NS_CATEGORY,
+				] )
+				->join( 'linktarget', null, 'cl_target_id = lt_id' );
+		}
+		$res = $queryBuilder
 			->limit( 1 )
 			->caller( __METHOD__ )
 			->fetchResultSet();
+
 		if ( $res->numRows() === 0 ) {
 			return $else;
 		}
