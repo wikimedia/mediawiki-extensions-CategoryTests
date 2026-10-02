@@ -25,8 +25,8 @@ class Hooks implements
 	 * @param Parser $parser
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		$parser->setFunctionHook( 'ifcategory', [ $this->categoryTests, 'ifcategory' ] );
-		$parser->setFunctionHook( 'ifnocategories', [ $this->categoryTests, 'ifnocategories' ] );
-		$parser->setFunctionHook( 'switchcategory', [ $this->categoryTests, 'switchcategory' ] );
+		$parser->setFunctionHook( 'ifcategory', $this->categoryTests->ifcategory( ... ) );
+		$parser->setFunctionHook( 'ifnocategories', $this->categoryTests->ifnocategories( ... ) );
+		$parser->setFunctionHook( 'switchcategory', $this->categoryTests->switchcategory( ... ) );
 	}
 }
